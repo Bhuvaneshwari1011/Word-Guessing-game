@@ -1,0 +1,81 @@
+/* Card animation */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/originals/2c/04/21/2c0421767384999231d80d0d8a4dcc9b.gif') no-repeat center center fixed;
+    /* Use your GIF URL or file path */
+    background-size: cover;
+}
+
+.card {
+    width: 400px;
+    padding: 50px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+    background-color: #dbd3db;
+    margin: 100px auto;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Display word animation (shake for wrong guesses) */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Button hover effect */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input {
+    padding: 5px;
+    font-size: 16px;
+}
